@@ -1,0 +1,8 @@
+<h1>Show</h1>
+<p><%= @course.open?%> </p>
+<p><%= @course.name %> </p>
+<p> <%= @course.seat_limit%> </p> 
+<p><%= @course.classroom_number%></p>
+<p><%= link_to "Edit #{@course.name}", edit_course_path%> </p>
+<p><%= button_to "Delete #{@course.name}","/courses/#{@course.id}", method: 'delete'%> </p>
+<p><%= button_to "Enroll", "/courses/#{@course.id}/decrement_limit", method:'patch' %> </p>>
